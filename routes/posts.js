@@ -13,9 +13,8 @@ const getTriangleType = (req, res) => {
   else if (a===b || a===c || b===c)
     return res.status(200).json("ISOCELES");
   //scalene
-  else if (a!==b && b!==c)
+  else
     return res.status(200).json("SCALENE");
-  else return res.status(500).json("this is not a recognised triangle");
 };
 
 const router = express.Router();
